@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(158, 217, 99);
+  top: 150px;
+
+}
+canvas {
+  display: block;
+  position:relative;
+  top: 0;
+}
