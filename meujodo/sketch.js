@@ -61,7 +61,7 @@ function Vquarto(){
   po3=createSprite(300,300)
   po3.addImage(po3img);
   po3.scale =3
-  if (protagonista.collide(po1)) {
+  if (protagonista.y <= po1.y/2) {
     po1.remove();
   }
   
