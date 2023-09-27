@@ -5,6 +5,7 @@ const Body = Matter.Body;
 
 var engine, world,quarto,protagonistaimg,banheiro,po1img,po1,po2img,po2,po3img,po3,protagonista,canvasivisivel;
 var gamestate=1;
+var score = 0
 
 function preload(){
   quarto = loadImage("assets/meu cuarto.png");
@@ -33,6 +34,8 @@ function draw() {
   if (gamestate === 1) {
     background(quarto);
     Vquarto();
+
+    text("score: " + score, 600, 50)
     
   }
   if (keyDown ("w")) {
@@ -61,8 +64,14 @@ function Vquarto(){
   po3=createSprite(300,300)
   po3.addImage(po3img);
   po3.scale =3
+//<<<<<<< patch-1
   if (protagonista.y <= po1.y/2) {
+//=======
+ // if (protagonista.collide(po1)) {
+    score +=1;
+//>>>>>>> main
     po1.remove();
+    
   }
   
 }
