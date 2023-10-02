@@ -77,6 +77,12 @@ function draw() {
     protagonista.x = protagonista.x + 5
   }
 
+   //girar imagem do player
+  if(keyDown("right")){
+    protagonista.rotateToDirection = true;
+    protagonista.rotation = protagonista.rotation + 10;
+  }
+  
   
   drawSprites();
 
